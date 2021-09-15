@@ -21,7 +21,7 @@ export default function Home() {
 
       <main
         // className="prose dark:prose-dark"
-        className="grid md:grid-cols-4 gap-4"
+        className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4"
       >
         <Clock time={time} label="Pacific" tz="America/Los_Angeles" />
         <Clock time={time} label="Mountain" tz="America/Denver" />
