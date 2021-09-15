@@ -21,6 +21,9 @@ jobs:
           npm install
           npm run build:prod
 
+      - name: Copy index.html to 404.html
+        run: cp out/index.html out/404.html
+
       - name: Add .nojekyll file
         run: touch out/.nojekyll
 

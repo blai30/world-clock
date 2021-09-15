@@ -1,16 +1,10 @@
 import dayjs from 'dayjs';
-import { useState } from 'react'
 import timezone from 'dayjs/plugin/timezone'
 import utc from 'dayjs/plugin/utc'
 
-const Clock = ({ label, tz }) => {
+const Clock = ({ time, label, tz }) => {
   dayjs.extend(timezone)
   dayjs.extend(utc)
-  const [time, setTime] = useState(Date.now())
-
-  setInterval(() => {
-    setTime(Date.now())
-  }, 1000)
 
   return (
     <div className="p-4 bg-gray-800 rounded-xl">
