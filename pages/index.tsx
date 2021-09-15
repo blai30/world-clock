@@ -1,9 +1,15 @@
 import { useEffect, useState } from 'react'
 import Head from 'next/head'
+import dayjs from 'dayjs'
+import timezone from 'dayjs/plugin/timezone'
+import utc from 'dayjs/plugin/utc'
 import Clock from '@/components/Clock'
 
 export default function Home() {
   const [time, setTime] = useState(Date.now())
+
+  dayjs.extend(timezone)
+  dayjs.extend(utc)
 
   useEffect(() => {
     setInterval(() => {
@@ -27,10 +33,10 @@ export default function Home() {
         <Clock time={time} label="Mountain" tz="America/Denver" />
         <Clock time={time} label="Central" tz="America/Chicago" />
         <Clock time={time} label="Eastern" tz="America/New_York" />
+        <Clock time={time} label="UTC" tz="UTC" />
         <Clock time={time} label="China" tz="Asia/Hong_Kong" />
         <Clock time={time} label="Japan" tz="Asia/Tokyo" />
         <Clock time={time} label="Korea" tz="Asia/Seoul" />
-        <Clock time={time} label="UTC" tz="UTC" />
       </main>
 
       <footer>

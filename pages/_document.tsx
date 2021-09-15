@@ -16,7 +16,8 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+          <link rel="stylesheet" type="text/css" href="https://rsms.me/inter/inter.css" />
+          <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato" />
         </Head>
         <body>
           <Main />
