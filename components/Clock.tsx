@@ -14,7 +14,7 @@ const Clock = ({ time, label, tz }) => {
       </div>
 
       {/* Time */}
-      <p className="font-normal font-display text-xl md:text-4xl xl:text-6xl">
+      <p className="font-normal text-xl md:text-4xl xl:text-6xl">
         {dayjs.tz(time, tz).format('h:mm:ss A')}
       </p>
 
